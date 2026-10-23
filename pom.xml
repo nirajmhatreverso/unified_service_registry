@@ -66,6 +66,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>unified-eureka-service</finalName>
         <plugins>
 
             <!-- Spring Boot Plugin -->

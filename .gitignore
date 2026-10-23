@@ -1,0 +1,72 @@
+# IntelliJ IDEA
+
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+
+# java
+*.class
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Keep Maven Wrapper files tracked
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+logs/
+log/
+
+#Environment Variables
+.env
+.env.*
+!.env.example
+*.local
+application-local.properties
+application-local.yml
+application-local.yaml
+secrets.yml
+secrets.yaml
+
+# Spring tool
+
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+.factorypath
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+*~
+*.orig
+
+# Coverage Reports
+coverage/
+jacoco.exec
+

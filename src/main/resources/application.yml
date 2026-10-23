@@ -1,6 +1,6 @@
 spring:
   application:
-    name: unified-service-registry
+    name: ${SERVICE_NAME:eureka-server}
 
 eureka:
   instance:
@@ -12,7 +12,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:${SERVER_PORT}/eureka/
   server:
     enable-self-preservation: true
     response-cache-update-interval-ms: 30000
@@ -27,4 +27,3 @@ management:
     web:
       exposure:
         include: health,info,metrics
-

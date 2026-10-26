@@ -1,29 +1,33 @@
+server:
+  port: ${SERVER_PORT:8761}
+
 spring:
   application:
-    name: ${SERVICE_NAME:eureka-server}
+    name: ${SERVICE_NAME:eureka}
 
 eureka:
   instance:
     hostname: localhost
-    preferIpAddress: false
+    prefer-ip-address: false
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 90
+
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:${SERVER_PORT}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
   server:
     enable-self-preservation: true
     response-cache-update-interval-ms: 30000
     eviction-interval-timer-in-ms: 60000
-    enable-self-preservation-threshold-percentage: 0.85
-
-server:
-  port: 8761
 
 management:
   endpoints:
     web:
       exposure:
-        include: health,info,metrics
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
